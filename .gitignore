@@ -17,4 +17,4 @@ out/
 .gradle/
 /build/
 # Default ignored files
-/workspace.xml
+/.idea/workspace.xml
