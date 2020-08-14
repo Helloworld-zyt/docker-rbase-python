@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-#curl -O https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
+
+curl -O https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
 tar -xf Python-3.8.5.tgz
 cd Python-3.8.5
 ./configure  --enable-optimizations
