@@ -2,8 +2,7 @@
 
 install.packages(c("devtools"),dependencies=TRUE)
 devtools::install_github(repo="hhoeflin/hdf5r")
-devtools::install_github(repo = "mojaveazure/loomR", ref = "develop")
-devtools::install_github("velocyto-team/velocyto.R")  
+devtools::install_github(repo = "mojaveazure/loomR", ref = "develop") 
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
