@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+PY_VERSION=3.8.5
+
 curl -O https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
-tar -xf Python-3.8.5.tgz
-cd Python-3.8.5
+tar -xf Python-${PY_VERSION}.tgz
+cd Python-${PY_VERSION}
 ./configure  --enable-optimizations
-make DESTDIR=Python-3.8.5
+make
 make altinstall
 rm -f /usr/bin/python
 rm -f /usr/bin/python2
