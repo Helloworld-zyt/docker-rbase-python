@@ -1,9 +1,10 @@
-FROM r-base:4.0.2
+FROM r-base:3.6.3
 ARG HOME=/home
 WORKDIR ${HOME}
 COPY sources.list /etc/apt/sources.list
 RUN apt-get update -y \
-    && apt-get install -y curl libhdf5-dev libgsl-dev libboost-dev libcurl4-openssl-dev libssl-dev libxml2-dev build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev wget
+    && apt-get -y build-dep libssl-dev libxml2-dev \
+    && apt-get -y install  bc build-essential libcurl4-openssl-dev libxml2-dev libssl-dev
 COPY  script /home/script
 RUN Rscript script/installRPackage.R && chmod u+x script/installPy.sh && sh script/installPy.sh && rm -rf ${HOME}/* && rm -rf /var/lib/apt/lists/*
 

@@ -1,13 +1,5 @@
-#options(repos=structure(c(CRAN="http://mirrors.aliyun.com/CRAN/")))
-
+# options(repos=structure(c(CRAN="http://mirrors.aliyun.com/CRAN/")))
 install.packages(c("devtools"),dependencies=TRUE)
-devtools::install_github(repo="hhoeflin/hdf5r")
-devtools::install_github(repo = "mojaveazure/loomR", ref = "develop") 
-
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install(c("S4Vectors", "SummarizedExperiment", "SingleCellExperiment", "MAST", "DESeq2", "monocle", "multtest", "pcaMethods"), ask=TRUE, update=TRUE )
-
-install.packages(c("Seurat", "RcppGSL", "RcppZiggurat", "Rfast", "mutoss", "Rfast2", "metap"), dependencies=TRUE)
-
+install.packages(c("xml2", "tidyverse", "RcppArmadillo", "data.table", "Matrix", "plyr", "optparse", "bigsnpr", "bigreadr"), dependencies=TRUE)
+devtools::install_github("tshmak/lassosum@v0.4.4")
 q()
